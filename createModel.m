@@ -20,7 +20,7 @@ end
 
 trainingData = cell(numel(files),1);
 for i = 1:numel(files)
-    trainingData{i} = loadWav(files{i}, numberCep);
+    trainingData{i} = loadData(files{i}, numberCep);
 end
 
 prior0 = normalise(rand(numberStates,1));
