@@ -1,5 +1,5 @@
 % fonction construisant un modèle pour un chiffre
-function model = createModel(chiffre)
+function model = createModel(chiffre, numberStates, numberObs, numberCep)
 if(chiffre < 0 || chiffre > 9)
     disp 'Ceci n''est pas un chiffre'
     return
@@ -18,8 +18,20 @@ for i = 1:length(otherDirectories)
     files = [files; otherFiles];
 end
 
+trainingData = cell(numel(files),1);
 for i = 1:numel(files)
-    %obs = loadWav(files(i));
-    % TODO: implement rest of magic
+    trainingData{i} = loadWav(files{i}, numberCep);
 end
+
+prior0 = normalise(rand(numberStates,1));
+transmat0 = mk_stochastic(rand(numberStates,numberStates));
+
+[mu0, Sigma0] = mixgauss_init(numberStates*numberObs, cell2mat(trainingData), 'diag');
+mu0 = reshape(mu0, [numberCep numberStates numberObs]);
+Sigma0 = reshape(Sigma0, [numberCep numberCep numberStates numberObs]);
+mixmat0 = mk_stochastic(rand(numberStates,numberObs));
+
+[LL, model.pi, model.A, model.mu, model.sigma, model.B] = mhmm_em(data, prior0, transmat0, mu0, Sigma0, mixmat0);
+
+
 end
