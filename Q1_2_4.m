@@ -1,4 +1,4 @@
-% Script repondant à la question 1.2.4
+% Script répondant à la question 1.2.4
 clear all;
 DonneesP1;
 

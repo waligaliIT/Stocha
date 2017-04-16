@@ -1,4 +1,4 @@
-%Script répondant à la question 1.1
+%Script rŽpondant ˆ la question 1.1
 clear all;
 DonneesP1;
 

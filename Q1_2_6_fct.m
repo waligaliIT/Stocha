@@ -1,4 +1,4 @@
-% fonction rÈpondant ‡ la question 1.2.6 (avec un jeu de paramËtres)
+% fonction répondant à la question 1.2.6 (avec un jeu de paramètres)
 function precision = Q1_2_6_fct(numberSeq, numberStates)
 precision = zeros(2,1);
 DonneesP1;

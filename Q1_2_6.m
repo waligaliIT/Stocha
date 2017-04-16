@@ -1,13 +1,13 @@
 % script répondant à la question 1.2.6
 clear all;
 
-% taille différente avec le bon nombre d'états
+% tailles différentes avec le bon nombre d'états
 precision_s1_4 = Q1_2_6_fct(30, 4);
 precision_s2_4 = Q1_2_6_fct(100, 4);
 precision_s3_4 = Q1_2_6_fct(200, 4);
 precision_s4_4 = Q1_2_6_fct(500, 4);
 
-% taille différente avec beaucoup d'états
+% tailles différentes avec beaucoup d'états
 precision_s1_6 = Q1_2_6_fct(30, 6);
 % precision_s2_6 = Q1_2_6_fct(100, 6); calculé plus bas
 precision_s3_6 = Q1_2_6_fct(200, 6);
