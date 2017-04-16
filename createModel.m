@@ -31,7 +31,7 @@ mu0 = reshape(mu0, [numberCep numberStates numberObs]);
 Sigma0 = reshape(Sigma0, [numberCep numberCep numberStates numberObs]);
 mixmat0 = mk_stochastic(rand(numberStates,numberObs));
 
-[LL, model.pi, model.A, model.mu, model.sigma, model.B] = mhmm_em(trainingData, prior0, transmat0, mu0, Sigma0, mixmat0);
+[LL, model.pi, model.A, model.mu, model.sigma, model.B] = mhmm_em(trainingData, prior0, transmat0, mu0, Sigma0, mixmat0, 'verbose', 0);
 
 
 end
