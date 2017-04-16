@@ -1,4 +1,4 @@
-% fonction important un échantillon de voix et extrayant des caractéristiques
+% fonction important un √©chantillon de voix et extrayant des caract√©ristiques
 function obs = loadData(path, numberCep)
 [sound,fs]= audioread(path);
 band = [700, 1400]/(fs/2);
