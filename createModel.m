@@ -18,7 +18,7 @@ for i = 1:length(otherDirectories)
     files = [files; otherFiles];
 end
 
-trainingData = cell(numel(files),1);
+trainingData = cell(1,numel(files));
 for i = 1:numel(files)
     trainingData{i} = loadData(files{i}, numberCep);
 end
@@ -31,7 +31,7 @@ mu0 = reshape(mu0, [numberCep numberStates numberObs]);
 Sigma0 = reshape(Sigma0, [numberCep numberCep numberStates numberObs]);
 mixmat0 = mk_stochastic(rand(numberStates,numberObs));
 
-[LL, model.pi, model.A, model.mu, model.sigma, model.B] = mhmm_em(data, prior0, transmat0, mu0, Sigma0, mixmat0);
+[LL, model.pi, model.A, model.mu, model.sigma, model.B] = mhmm_em(trainingData, prior0, transmat0, mu0, Sigma0, mixmat0);
 
 
 end
