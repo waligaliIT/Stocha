@@ -1,3 +1,4 @@
 Data/
 Examples/
 createWAVFilesFromM4A.m
+*.mat
