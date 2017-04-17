@@ -1,5 +1,5 @@
 % récupère tous les fichiers correspondant à un chiffre sous la forme d'un cell array
-function files = fichiersPourChiffre(digit)
+function files = filesForDigit(digit)
 
 if(digit < 0 || digit > 9)
     disp ['Ceci n''est pas un chiffre: ' int2str(digit)]
