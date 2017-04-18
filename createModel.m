@@ -7,7 +7,8 @@ for i = 1:numel(sounds)
 end
 
 prior0 = normalise(rand(numberStates,1));
-transmat0 = mk_stochastic(triu(rand(numberStates,numberStates)));
+% transmat0 = mk_stochastic(triu(rand(numberStates,numberStates)));
+transmat0 = mk_stochastic(initMat(numberStates, numberStates,@(i,j) (i<=j) .* (0.01 ^ abs(i-j))));
 
 [mu0, Sigma0] = mixgauss_init(numberStates*numberGaussPerState, cell2mat(trainingData), 'diag');
 mu0 = reshape(mu0, [numberCep numberStates numberGaussPerState]);
