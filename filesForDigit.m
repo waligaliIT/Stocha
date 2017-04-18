@@ -7,7 +7,7 @@ if(digit < 0 || digit > 9)
 end
 
 givenDirectory = ['Examples/' int2str(digit) '/'];
-givenFiles = arrayfun(@(e) fullfile(givenDirectory, e.name), dir([givenDirectory 'ex-' int2str(digit) '-*.wav']), 'UniformOutput', false);
+givenFiles = arrayfun(@(e) fullfile(givenDirectory, e.name), dir([givenDirectory 'ex-' int2str(digit) '-2.wav']), 'UniformOutput', false);
 
 files = givenFiles;
 
