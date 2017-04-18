@@ -1,4 +1,4 @@
-% fonction construisant un modèle pour un chiffre
+% function building a model for a given digit
 function model = createModel(sounds, numberStates, numberObs, numberCep)
 
 trainingData = cell(1,numel(sounds));

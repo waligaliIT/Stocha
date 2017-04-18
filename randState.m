@@ -1,3 +1,4 @@
+% generates an index randomly following the given probabilistic distribution
 function state = randState(dist)
 r = rand();
 cumul = 0;

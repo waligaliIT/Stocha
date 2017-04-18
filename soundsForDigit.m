@@ -1,4 +1,4 @@
-% récupère tous les fichiers correspondant à un chiffre sous la forme d'un cell array
+% extract the audio form all the files corresponding to a digit
 function sounds = soundsForDigit(digit)
 
 if(digit < 0 || digit > 9)
@@ -11,7 +11,7 @@ givenFiles = arrayfun(@(e) fullfile(givenDirectory, e.name), dir([givenDirectory
 
 files = givenFiles;
 
-otherDirectories = {'Data/seb/', 'Data/nathan/', 'Data/francois/'}; % chacun rajoute ses données là où il faut
+otherDirectories = {'Data/seb/', 'Data/nathan/', 'Data/francois/'}; % directories holding everybody's data
 for i = 1:length(otherDirectories)
     tmpForMatlabLimitation = otherDirectories(i);
     otherDirectory = tmpForMatlabLimitation{1};

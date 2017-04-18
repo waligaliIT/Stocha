@@ -1,3 +1,4 @@
+% function computing the precision associated with 2 observed frequencies coming from two different models
 function precision = getPrecision(seqObs1, seqObs2, hmm1, hmm2)
 logprob11 = zeros(size(seqObs1,1),1);
 logprob12 = zeros(size(seqObs1,1),1);

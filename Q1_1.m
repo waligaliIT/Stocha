@@ -1,4 +1,4 @@
-%Script répondant à la question 1.1
+% script answering the question 1.1.1 and 1.1.4
 clear all;
 DonneesP1;
 

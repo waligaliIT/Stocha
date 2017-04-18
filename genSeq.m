@@ -1,3 +1,4 @@
+% function generating numberSeq sequences of lengthSeq observations coming from the given model
 function seq = genSeq(model, lengthSeq, numberSeq)
 x = zeros(numberSeq, lengthSeq);
 
