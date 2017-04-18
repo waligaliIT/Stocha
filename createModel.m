@@ -1,9 +1,9 @@
 % fonction construisant un modèle pour un chiffre
-function model = createModel(files, numberStates, numberObs, numberCep)
+function model = createModel(sounds, numberStates, numberObs, numberCep)
 
-trainingData = cell(1,numel(files));
-for i = 1:numel(files)
-    trainingData{i} = loadData(files{i}, numberCep);
+trainingData = cell(1,numel(sounds));
+for i = 1:numel(sounds)
+    trainingData{i} = getCoef(sounds{i}, numberCep);
 end
 
 prior0 = normalise(rand(numberStates,1));

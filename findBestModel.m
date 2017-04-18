@@ -2,7 +2,7 @@
 function [index, prob] = findBestModel(file, models)
 % `models` est un tableau avec tous les modèles assumés avec tous le même nombre de coefficient cepstraux
 
-data = loadData(file, size(models(1).mu, 1));
+data = getCoef(audioread(file), size(models(1).mu, 1));
 
 prob = arrayfun(@(m) mhmm_logprob(data, m.pi, m.A, m.mu, m.sigma, m.B), models)';
 
