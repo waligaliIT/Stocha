@@ -2,3 +2,5 @@ Data/
 Examples/
 createWAVFilesFromM4A.m
 *.mat
+*.m~
+.DS_Store
