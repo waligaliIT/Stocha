@@ -7,7 +7,11 @@ results = zeros(10,4);
 results(:,1) = 0:9;
 
 for i = 1:numel(files)
-	foundDigit = findBestModel(audioread(files{i}), models) + 1;
+	[sound, fs] = audioread(files{i});
+	if fs ~= 44100
+		disp(['bad frequency' int2str(fs)])
+	end
+	foundDigit = findBestModel(sound, models) + 1;
 	
 	[~,name] = fileparts(files{i});
 
