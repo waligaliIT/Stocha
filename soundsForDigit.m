@@ -1,6 +1,6 @@
 % extract the audio form all the files corresponding to a digit
 function sounds = soundsForDigit(digit)
-
+%% 
 if(digit < 0 || digit > 9)
     disp ['Ceci n''est pas un chiffre: ' int2str(digit)]
     return
