@@ -7,7 +7,7 @@ end
 
 %% extract sound file from the directory
 givenDirectory = ['Examples/' int2str(digit)];
-givenFiles = extractSoundFiles( givenDirectory, digit, 'ex-', '-*' )
+givenFiles = extractSoundFiles( givenDirectory, digit, 'ex-', '-*' );
 %arrayfun(@(e) fullfile(givenDirectory, e.name), dir([givenDirectory 'ex-' int2str(digit) '-*.wav']), 'UniformOutput', false);
 
 files = givenFiles;
